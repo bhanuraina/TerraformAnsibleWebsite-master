@@ -1,12 +1,13 @@
 variable "access_key" { }
 variable "secret_key" { }
 variable "region" {
-  default = "us-east-2"
+  default = "eu-west-2"
 }
 variable "availability_zone" {
-  default = "us-east-2a"
+  default = "eu-west-2a"
 }
 variable "environment_tag" {
   description = "Environment tag"
   default = "dev"
 }
+
