@@ -32,11 +32,7 @@ module "dnsModule" {
  	access_key 	= "${var.access_key}"
 	secret_key 	= "${var.secret_key}"
 	region     	= "${var.region}"
-	domain_name	= "miteshsharma.com"
-	aRecords	= [
-		"miteshsharma.com ${module.instanceModule.instance_eip}",
-	]
-	cnameRecords	= [
-		"www.miteshsharma.com miteshsharma.com"
-	]
+	domain_name	= "bhanuraina.com"
+	
 }
+
