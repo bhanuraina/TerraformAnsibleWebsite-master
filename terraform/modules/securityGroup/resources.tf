@@ -20,12 +20,9 @@ resource "aws_security_group" "sg_22" {
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["10.1.0.0/24"]
   }
 
-  tags {
-    "Environment" = "${var.environment_tag}"
-  }
 }
 
 resource "aws_security_group" "sg_80" {
@@ -39,6 +36,12 @@ resource "aws_security_group" "sg_80" {
       cidr_blocks = ["0.0.0.0/0"]
   }
 
+ingress {
+      from_port   = 443
+      to_port     = 443
+      protocol    = "tcp"
+      cidr_blocks = ["0.0.0.0/0"]
+  }
   egress {
     from_port   = 0
     to_port     = 0
@@ -46,7 +49,4 @@ resource "aws_security_group" "sg_80" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  tags {
-    "Environment" = "${var.environment_tag}"
-  }
 }
