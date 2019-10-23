@@ -3,7 +3,7 @@
 variable "access_key" {}
 variable "secret_key" {}
 variable "region" {
-  default = "us-east-2"
+  default = "eu-west-2"
 }
 variable "vpc_id" {
   description = "VPC id"
@@ -20,7 +20,7 @@ variable "security_group_ids" {
 }
 variable "environment_tag" {
   description = "Environment tag"
-  default = ""
+  default = "poc"
 }
 variable "key_pair_name" {
   description = "EC2 Key pair name"
@@ -28,9 +28,15 @@ variable "key_pair_name" {
 }
 variable "instance_ami" {
   description = "EC2 instance ami"
-  default = "ami-0cf31d971a3ca20d6"
+  default = "ami-00a1270ce1e007c27"
+  #default = "ami-0007489126bb76c2e"	
 }
 variable "instance_type" {
   description = "EC2 instance type"
   default = "t2.micro"
 }
+
+variable "instance_count" {
+  default = "3"
+}
+
